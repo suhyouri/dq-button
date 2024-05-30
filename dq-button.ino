@@ -99,6 +99,7 @@ void loop() {
             Serial.println("Button 2 pressed");
             Keyboard.write(KEY_RIGHT_ARROW);
             Keyboard.releaseAll();
+            shortFlag2 = false;
           } else {
             // 버튼이 떼졌을 때 짧은 누름으로 판단하고 메시지 출력
             if (millis() - pressStartTime2 < shortPressDuration && !(buttonState1 == LOW && buttonState2 == LOW)) {
